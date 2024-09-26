@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Slate--300: hsl(212, 45%, 89%);
+    --Slate--500: hsl(216, 15%, 48%);
+    --Slate--900: hsl(218, 44%, 22%);
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    height: 100vh;
+    background-color: var(--Slate--300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Box {
+    background-color: var(--White);
+    width: min-content;
+    padding: 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.QR {
+    width: 400px;
+    transition: all 0.5s ease-in-out;
+}
+
+.QR:hover {
+    scale: 1.02;
+    border-radius: 30px;
+}
+
+.wrapper {
+    max-width: 40ch;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--Slate--900);
+}
+
+.paragraph {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--Slate--500);
+    transition: all 0.7s ease-in-out;
+}
+
+.paragraph:hover {
+    color: var(--Slate--900);
+}
+
+.BR {
+    border-radius: 20px;
+}
+
+.TX {
+    text-align: center;
+    padding-top: 15px;
+}
+
+@media (max-width: 460px) {
+
+    .QR {
+        width: 350px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .QR {
+        width: 300px;
+    }
+
+    .wrapper {
+        max-width: 35ch;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .QR {
+        width: 250px;
+    }
+
+    .wrapper {
+        max-width: 30ch;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    .QR {
+        width: 200px;
+    }
+
+    .wrapper {
+        max-width: 20ch;
+    }
+
+    .title {
+        font-size: 15px;
+    }
+}
